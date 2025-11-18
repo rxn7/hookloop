@@ -1,0 +1,22 @@
+.hand {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+button {
+	cursor: pointer;
+
+	width: 100px;
+	height: 50px;
+}
+
+#hit-btn {
+	background-color: #b8bb26 !important;
+	border-color: #98971a !important;
+}
+
+#stand-btn {
+	background-color: #fb4934 !important;
+	border-color: #cc241d !important;
+}

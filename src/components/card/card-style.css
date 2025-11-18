@@ -1,0 +1,13 @@
+.card > svg {
+	filter: drop-shadow(8px 8px 1px rgb(0 0 0 / 0.4));
+}
+
+.card {
+	transition: scale 0.1s ease-in-out;
+	z-index: 5;
+}
+
+.card:hover {
+	z-index: 10;
+	scale: 1.3;
+}
