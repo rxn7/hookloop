@@ -2,7 +2,6 @@ import { CardData, CardRank, CardSuit } from "@/card";
 
 import "./card-style.css";
 import { default as textureAtlas } from '@/assets/PlayingCards.svg';
-import { default as cardsBackTextureAtlas } from '@/assets/CardsBack.svg';
 
 const cardSvgWidth: number = 242;
 const cardSvgHeight: number = 336.5

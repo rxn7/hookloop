@@ -3,16 +3,18 @@ import { CardData, CardRank } from "./card";
 export class Deck {
 	private cards: CardData[] = [];
 
-	constructor() {
+	constructor(public readonly deckCount: number = 6) {
 		this.reset();
 		this.shuffle();
 	}
 
 	public reset(): void {
 		this.cards = [];
-		for(let rank = CardRank.ACE; rank <= CardRank.KING; ++rank) {
-			for(let suit = 0; suit < 4; ++suit) {
-				this.cards.push({ rank: rank, suit: suit });
+		for(let i=0; i<6; ++i) {
+			for(let rank = CardRank.ACE; rank <= CardRank.KING; ++rank) {
+				for(let suit = 0; suit < 4; ++suit) {
+					this.cards.push({ rank: rank, suit: suit });
+				}
 			}
 		}
 	}
