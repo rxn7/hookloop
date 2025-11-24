@@ -1,4 +1,4 @@
-import { CardData, CardRank, CardSuit } from "./card";
+import { CardData, CardRank } from "./card";
 
 export class Deck {
 	private cards: CardData[] = [];
@@ -9,13 +9,12 @@ export class Deck {
 	}
 
 	public reset(): void {
+		this.cards = [];
 		for(let rank = CardRank.ACE; rank <= CardRank.KING; ++rank) {
 			for(let suit = 0; suit < 4; ++suit) {
 				this.cards.push({ rank: rank, suit: suit });
 			}
 		}
-
-		console.log(this.cards);
 	}
 
 	public shuffle(): void {
@@ -34,5 +33,6 @@ export class Deck {
 		return this.cards.pop();
 	}
 
+	public count = (): number => this.cards.length;
 	public isEmpty = (): boolean => this.cards.length === 0;
 }
